@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// Using the Houses API, or any open API of your choice you can find online, create a 
+// - single page that allows for all 4 CRUD operations to be performed on a resource from the API. 
+// Create a React component (or more, if needed) to represent the resource. 
+// Make all forms and other necessary UI pieces their own components as reasonable.
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import React, { Component } from 'react';
+import { HousesList } from './Components/HousesList';
+
+class App extends Component {
+  render () {
+    return (
+      <div>
+        <HousesList/>
+      </div>
+    )
+  }
 }
 
 export default App;
